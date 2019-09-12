@@ -124,13 +124,12 @@ h1, h2 {
 
 	/***************** INTRO ******************/
 	.Intro {
-		margin-left:1rem;
-		margin-right:1rem;
 		padding-top:4rem;
 		padding-bottom:4rem;
 		background-color:@colorBack;
 
 		img {
+			margin-left:3rem;
 			width:270px;
 
 			@media (max-width:500px) {
@@ -141,6 +140,8 @@ h1, h2 {
 		}
 
 		.NameText {
+			margin-left:3rem;
+			margin-right:3em;
 			font-size:3rem;
 			display: flex;
 			letter-spacing: 0.2rem;
@@ -162,17 +163,23 @@ h1, h2 {
 		}
 
 		.TmyJ {
+			margin-left:3rem;
+			margin-right:3em;
 			font-size:1.8rem;
 			padding-bottom:1rem;
 			border-bottom:1px solid black;
 		}
 
 		p {
+			margin-left:3rem;
+			margin-right:3em;
 			margin-top:1rem;
 			margin-bottom:1rem;
 		}
 
 		button {
+			margin-left:3rem;
+			margin-right:3em;
 			background-color: @colorFoot;
 			padding:1rem;
 			color:white;
@@ -217,18 +224,51 @@ h1, h2 {
 				padding-left:0.5rem;
 				padding-top:0.5rem;
 				padding-bottom: 0.5rem;
-
-				// @media (max-width:600px) {
-					
-				// }
 			}
-		
 		}
 
-
-
-
 	} //.AboutMe
+
+	/***************** WORKHISTORY ******************/
+	.WorkHistory {
+		width:95%;
+		margin-left:2.5%;
+		margin-bottom:2rem;
+		
+		h2 {
+			margin-bottom:0.8rem;
+			font-size:2rem;
+		}
+
+		div {
+			overflow-x:scroll;
+		}
+		
+		table {
+			border-collapse: collapse;
+			width: 100%;
+
+			th, td {
+				text-align: left;
+				padding-top:0.8rem;
+				padding-bottom:0.8rem;
+				border-top:1px solid @colorBack;
+				border-bottom:1px solid @colorBack;
+			}
+
+			th {
+				font-weight: bold;
+			}
+
+			tr:nth-child(even) {
+				background-color: @colorBack;
+			}
+
+		} // table
+
+
+	} //WorkHistory
+
 
 	/***************** FOOTER ******************/
 	footer {

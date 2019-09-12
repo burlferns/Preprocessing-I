@@ -173,6 +173,7 @@ h2 {
   /***************** HEADER ******************/
   /***************** INTRO ******************/
   /***************** ABOUT ME ******************/
+  /***************** WORKHISTORY ******************/
   /***************** FOOTER ******************/
 }
 .container header {
@@ -192,13 +193,12 @@ h2 {
   margin-right: 1rem;
 }
 .container .Intro {
-  margin-left: 1rem;
-  margin-right: 1rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: lightgrey;
 }
 .container .Intro img {
+  margin-left: 3rem;
   width: 270px;
 }
 @media (max-width: 500px) {
@@ -209,6 +209,8 @@ h2 {
   }
 }
 .container .Intro .NameText {
+  margin-left: 3rem;
+  margin-right: 3em;
   font-size: 3rem;
   letter-spacing: 0.2rem;
   display: flex;
@@ -229,15 +231,21 @@ h2 {
   }
 }
 .container .Intro .TmyJ {
+  margin-left: 3rem;
+  margin-right: 3em;
   font-size: 1.8rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
 }
 .container .Intro p {
+  margin-left: 3rem;
+  margin-right: 3em;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .container .Intro button {
+  margin-left: 3rem;
+  margin-right: 3em;
   background-color: DarkGrey;
   padding: 1rem;
   color: white;
@@ -280,6 +288,36 @@ h2 {
   padding-left: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.container .WorkHistory {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 2rem;
+}
+.container .WorkHistory h2 {
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+}
+.container .WorkHistory div {
+  overflow-x: scroll;
+}
+.container .WorkHistory table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .WorkHistory table th,
+.container .WorkHistory table td {
+  text-align: left;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+.container .WorkHistory table th {
+  font-weight: bold;
+}
+.container .WorkHistory table tr:nth-child(even) {
+  background-color: lightgrey;
 }
 .container footer {
   text-align: center;
