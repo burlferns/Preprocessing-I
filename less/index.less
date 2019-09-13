@@ -92,7 +92,7 @@ body {
 }
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Manjari&display=swap');
 
-a, p, {
+a, p {
 	font-family: @paraFontStyle;
 }
 
@@ -102,6 +102,9 @@ h1, h2 {
 
 
 .container {
+	max-width: 800px;
+	width:100%;
+	margin:0 auto;
 
 	/***************** HEADER ******************/
 	header {
@@ -127,7 +130,7 @@ h1, h2 {
 		padding-top:4rem;
 		padding-bottom:4rem;
 		background-color:@colorBack;
-
+	
 		img {
 			margin-left:3rem;
 			width:270px;
@@ -192,8 +195,8 @@ h1, h2 {
 	/***************** ABOUT ME ******************/
 	.AboutMe {
 		display: flex;
-		justify-content: space-evenly;
-		margin-bottom:2rem;
+		justify-content: space-between;
+		margin-bottom:3rem;
 		
 		@media (max-width:500px) {
 			.columnStart(); 
@@ -204,10 +207,15 @@ h1, h2 {
 		.ListenUP,  .StuffGood{
 			width:@AboutTextWidth;
 			margin-top:2rem;
+			width:47%;
 
 			@media (max-width:650px) {
 				width:@AboutTextWidthPt;
 			}
+		}
+
+		.ListenUP > p {
+			line-height: 1.4; 
 		}
 
 		h2 {
@@ -221,9 +229,10 @@ h1, h2 {
 		
 			p {
 				border:1px solid @colorBack;
-				padding-left:0.5rem;
+				padding-left:1rem;
 				padding-top:0.5rem;
 				padding-bottom: 0.5rem;
+				line-height: 1.9; 
 			}
 		}
 
@@ -231,8 +240,8 @@ h1, h2 {
 
 	/***************** WORKHISTORY ******************/
 	.WorkHistory {
-		width:95%;
-		margin-left:2.5%;
+		width:97%;
+		margin:0 auto;
 		margin-bottom:2rem;
 		
 		h2 {
@@ -273,11 +282,11 @@ h1, h2 {
 	/***************** FOOTER ******************/
 	footer {
 		text-align:center;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		background-color: @colorFoot;
 		color:white;
-		padding-top:1rem;
-		padding-bottom: 1.5rem;
+		padding-top:1.4rem;
+		padding-bottom: 1.8rem;
 	}
 
 

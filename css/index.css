@@ -170,6 +170,9 @@ h2 {
   font-family: 'Josefin Sans', sans-serif;
 }
 .container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
   /***************** HEADER ******************/
   /***************** INTRO ******************/
   /***************** ABOUT ME ******************/
@@ -253,8 +256,8 @@ h2 {
 }
 .container .AboutMe {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 @media (max-width: 500px) {
   .container .AboutMe {
@@ -267,12 +270,16 @@ h2 {
 .container .AboutMe .StuffGood {
   width: 30rem;
   margin-top: 2rem;
+  width: 47%;
 }
 @media (max-width: 650px) {
   .container .AboutMe .ListenUP,
   .container .AboutMe .StuffGood {
     width: 23rem;
   }
+}
+.container .AboutMe .ListenUP > p {
+  line-height: 1.4;
 }
 .container .AboutMe h2 {
   margin-bottom: 1rem;
@@ -285,13 +292,14 @@ h2 {
 }
 .container .AboutMe .section2 p {
   border: 1px solid lightgrey;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  line-height: 1.9;
 }
 .container .WorkHistory {
-  width: 95%;
-  margin-left: 2.5%;
+  width: 97%;
+  margin: 0 auto;
   margin-bottom: 2rem;
 }
 .container .WorkHistory h2 {
@@ -321,9 +329,9 @@ h2 {
 }
 .container footer {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
   background-color: DarkGrey;
   color: white;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.8rem;
 }
