@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	// border:1px solid black;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,6 +55,240 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+/***************** VARIABLES ******************/
+@colorBack:lightgrey;
+@colorFoot:DarkGrey;
+@colorFootText:white;
+@headingFontStyle: 'Josefin Sans', sans-serif;
+@paraFontStyle: 'Manjari', sans-serif;
+@AboutTextWidth: 30rem;
+@AboutTextWidthPt: 23rem;
+
+
+/***************** MIXINS ******************/
+.columnStart() {
+	flex-direction:column;
+	justify-content: flex-start;
+}
+
+.columnCenter() {
+	flex-direction: column;
+	justify-content:center;
+}
+
+/***************** GENERAL ******************/
+html {
+	font-size:62.5%; 
+}
+body {
+	font-size:1.6rem; 
+}
+* {
+	max-width: 100%; 
+	line-height: 1;
+}
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Manjari&display=swap');
+
+a, p {
+	font-family: @paraFontStyle;
+}
+
+h1, h2 {
+	font-family: @headingFontStyle;
+}
+
+
+.container {
+	max-width: 800px;
+	width:100%;
+	margin:0 auto;
+
+	/***************** HEADER ******************/
+	header {
+		display:flex;
+		justify-content: flex-end;
+		margin-top:2rem;
+		margin-bottom:2rem;
+
+		@media (max-width:500px) {
+			justify-content: space-evenly;
+		}
+
+		a {
+			text-decoration: none;		
+			margin-left:1rem;
+			margin-right:1rem;	
+		}
+
+	} //header
+
+	/***************** INTRO ******************/
+	.Intro {
+		padding-top:4rem;
+		padding-bottom:4rem;
+		background-color:@colorBack;
+	
+		img {
+			margin-left:3rem;
+			width:270px;
+
+			@media (max-width:500px) {
+				width:54%;
+				margin-left:23%;
+				margin-right:23%;
+			}
+		}
+
+		.NameText {
+			margin-left:3rem;
+			margin-right:3em;
+			font-size:3rem;
+			display: flex;
+			letter-spacing: 0.2rem;
+			display: flex;
+			justify-content: space-between;
+			width:450px;
+			margin-top:1rem;
+			margin-bottom:1rem;
+
+			@media (max-width:500px) {
+				.columnStart();
+			}
+
+			.dash {
+				@media (max-width:500px) {
+					display:none;
+				}			
+			}
+		}
+
+		.TmyJ {
+			margin-left:3rem;
+			margin-right:3em;
+			font-size:1.8rem;
+			padding-bottom:1rem;
+			border-bottom:1px solid black;
+		}
+
+		p {
+			margin-left:3rem;
+			margin-right:3em;
+			margin-top:1rem;
+			margin-bottom:1rem;
+		}
+
+		button {
+			margin-left:3rem;
+			margin-right:3em;
+			background-color: @colorFoot;
+			padding:1rem;
+			color:white;
+			border-radius: 3px;
+		}
+
+
+	} //.Intro
+
+	/***************** ABOUT ME ******************/
+	.AboutMe {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom:3rem;
+		
+		@media (max-width:500px) {
+			.columnStart(); 
+			align-items: center;
+		}
+
+		
+		.ListenUP,  .StuffGood{
+			width:@AboutTextWidth;
+			margin-top:2rem;
+			width:47%;
+
+			@media (max-width:650px) {
+				width:@AboutTextWidthPt;
+			}
+		}
+
+		.ListenUP > p {
+			line-height: 1.4; 
+		}
+
+		h2 {
+			margin-bottom:1rem;
+			font-size:2rem;
+		}
+
+		.section2 {
+			display: flex;
+			.columnCenter();
+		
+			p {
+				border:1px solid @colorBack;
+				padding-left:1rem;
+				padding-top:0.5rem;
+				padding-bottom: 0.5rem;
+				line-height: 1.9; 
+			}
+		}
+
+	} //.AboutMe
+
+	/***************** WORKHISTORY ******************/
+	.WorkHistory {
+		width:97%;
+		margin:0 auto;
+		margin-bottom:2rem;
+		
+		h2 {
+			margin-bottom:0.8rem;
+			font-size:2rem;
+		}
+
+		div {
+			overflow-x:scroll;
+		}
+		
+		table {
+			border-collapse: collapse;
+			width: 100%;
+
+			th, td {
+				text-align: left;
+				padding-top:0.8rem;
+				padding-bottom:0.8rem;
+				border-top:1px solid @colorBack;
+				border-bottom:1px solid @colorBack;
+			}
+
+			th {
+				font-weight: bold;
+			}
+
+			tr:nth-child(even) {
+				background-color: @colorBack;
+			}
+
+		} // table
+
+
+	} //WorkHistory
+
+
+	/***************** FOOTER ******************/
+	footer {
+		text-align:center;
+		font-size: 1.4rem;
+		background-color: @colorFoot;
+		color:white;
+		padding-top:1.4rem;
+		padding-bottom: 1.8rem;
+	}
+
+
+
+}
